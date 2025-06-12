@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style>
+    body {
+      background-color: black;
+      color: white;
+    }
+    a {
+        color:blanchedalmond
+    }
+  </style>
+    <title>Financial Dashboard</title>
+</head>
+<body>
+    <h1>Financial Dashboard</h1>
+    <h3>Select section</h3>
+    {% for title, url in pages.items %}
+        <p><a href="{{ url }}">{{ title }}</a></p>
+    {% endfor %}
+</body>
+</html>
