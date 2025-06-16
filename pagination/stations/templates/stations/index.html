@@ -1,0 +1,63 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Остановки наземного транспорта</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static "stations/normalize.css" %}">
+    <link rel="stylesheet" href="{% static "stations/skeleton.css" %}">
+</head>
+<body>
+<div class="container">
+    <h2>Список остановок</h2>
+
+    {% if bus_stations %}
+        <div style="overflow-x:auto">
+            <table class="u-full-width">
+                <thead>
+                <tr>
+                    <th>Название</th>
+                    <th>Улица</th>
+                    <th>Район</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for station in bus_stations %}
+                    <tr>
+                        <td>{{ station.Name }}</td>
+                        <td>{{ station.Street }}</td>
+                        <td>{{ station.District }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <p>Страница № {{ page.number }}</p>
+        <div class="pagination" style="margin-top: 1em;">
+            {% if page.has_previous %}
+                <a class="button button-primary" href="?page={{ page.previous_page_number }}">⟵</a>
+            {% endif %}
+
+            {% for num in page_range %}
+                {% if num == '...' %}
+                    <span class="button disabled">…</span>
+                {% elif num == page.number %}
+                    <a class="button current" aria-current="page">{{ num }}</a>
+                {% else %}
+                    <a class="button" href="?page={{ num }}">{{ num }}</a>
+                {% endif %}
+            {% endfor %}
+
+            {% if page.has_next %}
+                <a class="button button-primary" href="?page={{ page.next_page_number }}">⟶</a>
+            {% endif %}
+        </div>
+    {% else %}
+        <p>Нет данных для отображения.</p>
+    {% endif %}
+</div>
+</body>
+</html>
