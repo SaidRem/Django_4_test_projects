@@ -7,6 +7,7 @@ from phones.models import Phone
 
 class Command(BaseCommand):
     help = 'Imports phones from csv file to Phone model.'
+
     def add_arguments(self, parser):
         parser.add_argument('csv_path', type=str, help='Path to csv file.')
 
