@@ -3,7 +3,7 @@ from django.core.management.base import BaseCommand
 from books.models import Book
 
 
-class Commande(BaseCommand):
+class Command(BaseCommand):
     help = 'Loads books from a JSON file into the database'
 
     def add_arguments(self, parser):
