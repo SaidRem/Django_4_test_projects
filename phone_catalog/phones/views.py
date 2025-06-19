@@ -7,7 +7,7 @@ def index(request):
 
 
 def show_catalog(request):
-    template = 'catalog.html'
+    template = 'phones/catalog.html'
 
     sort_val = request.GET.get('sort')
 
@@ -26,7 +26,7 @@ def show_catalog(request):
 
 
 def show_product(request, slug):
-    template = 'product.html'
+    template = 'phones/product.html'
     phone = get_object_or_404(Phone, slug=slug)
     context = {
         'phone': phone,
