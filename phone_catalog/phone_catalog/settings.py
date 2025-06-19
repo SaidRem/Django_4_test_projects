@@ -76,8 +76,10 @@ WSGI_APPLICATION = 'phone_catalog.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'phone_catalog',
+        'USER': 'postgres',
+        'PASSWORD': '123',
     }
 }
 
