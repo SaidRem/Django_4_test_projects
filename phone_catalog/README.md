@@ -1,184 +1,179 @@
-Вот пример **README.md** для твоего проекта `phone_catalog`:
+Here’s the English translation of your `README.md` file:
 
 ---
 
 # Phone Catalog
 
-Проект **Phone Catalog** — это веб-приложение для отображения каталога телефонов с возможностью сортировки и просмотра подробной информации о каждом товаре.
+The **Phone Catalog** project is a web application for displaying a phone catalog with sorting capabilities and detailed product information.
 
 ---
 
-## 📋 Описание
+## 📋 Description
 
-Phone Catalog позволяет пользователям просматривать каталог телефонов с фильтрацией по различным параметрам. Приложение включает такие функции как:
+Phone Catalog allows users to browse a phone catalog with filtering by various parameters. The application includes features such as:
 
-* Просмотр списка телефонов
-* Сортировка по названию и цене
-* Детальная страница с информацией о товаре
-
----
-
-## 🛠 Технологии
-
-* **Django** 4.2 — для разработки веб-приложения.
-* **Bootstrap** — для удобной и адаптивной вёрстки.
-* **SQLite** — для хранения данных (или другая СУБД по выбору).
+* Viewing a list of phones  
+* Sorting by name and price  
+* A detailed product page  
 
 ---
 
-## 🚀 Установка
+## 🛠 Technologies  
 
-1. Клонируйте репозиторий:
-
-   ```bash
-   git clone https://github.com/your-username/phone_catalog.git
-   cd phone_catalog
-   ```
-
-2. Создайте и активируйте виртуальное окружение:
-
-   Для Windows:
-
-   ```bash
-   python -m venv venv
-   venv\Scripts\activate
-   ```
-
-   Для Linux/Mac:
-
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate
-   ```
-
-3. Установите зависимости:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. Примените миграции:
-
-   ```bash
-   python manage.py migrate
-   ```
-
-5. Создайте суперпользователя:
-
-   ```bash
-   python manage.py createsuperuser
-   ```
-
-6. Запустите сервер:
-
-   ```bash
-   python manage.py runserver
-   ```
-
-7. Перейдите по адресу `http://127.0.0.1:8000/` для просмотра сайта.
+* **Django** 4.2 — for web application development.  
+* **Bootstrap** — for convenient and responsive layout.  
+* **PostgreSQL** — for data storage (or another DBMS of your choice).  
 
 ---
 
-## 🖥 Админка
+## 🚀 Installation  
 
-Для доступа к административной панели Django используйте URL:
-`http://127.0.0.1:8000/admin/`
+1. Clone the repository:  
+
+   ```bash  
+   git clone https://github.com/saidrem/phone_catalog.git  
+   cd phone_catalog  
+   ```  
+
+2. Create and activate a virtual environment:  
+
+   For Windows:  
+
+   ```bash  
+   python -m venv venv  
+   venv\Scripts\activate  
+   ```  
+
+   For Linux/Mac:  
+
+   ```bash  
+   python3 -m venv venv  
+   source venv/bin/activate  
+   ```  
+
+3. Install dependencies:  
+
+   ```bash  
+   pip install -r requirements.txt  
+   ```  
+
+4. Apply migrations:  
+
+   ```bash  
+   python manage.py migrate  
+   ```  
+
+5. Create a superuser:  
+
+   ```bash  
+   python manage.py createsuperuser  
+   ```  
+
+6. Run the server:  
+
+   ```bash  
+   python manage.py runserver  
+   ```  
+
+7. Visit `http://127.0.0.1:8000/` to view the website.  
 
 ---
 
-## 📂 Структура проекта
+## 🖥 Admin Panel  
+
+To access the Django admin panel, use the URL:  
+`http://127.0.0.1:8000/admin/`  
+
+---
+
+## 📂 Project Structure  
 
 ```
-phone_catalog/
-│
-├── phone_catalog/            ← Основная директория проекта
-│   ├── settings.py           ← Настройки проекта
-│   ├── urls.py               ← URL-маршруты
-│   └── ...
-│
-├── phones/                   ← Приложение "phones"
-│   ├── migrations/           ← Миграции БД
-│   ├── models.py             ← Модели данных
-│   ├── views.py              ← Представления
-│   ├── templates/            ← Шаблоны HTML
-│   └── static/               ← Статические файлы (CSS, JS)
-│
-├── manage.py                 ← Основной скрипт для управления проектом
-├── requirements.txt          ← Зависимости проекта
-└── README.md                 ← Этот файл
-```
-
----
-
-## ⚙️ Настройка статики
-
-Статические файлы (CSS, JavaScript) размещаются в директории `static/`. Для обработки статических файлов в production нужно настроить их сборку с помощью команды:
-
-```bash
-python manage.py collectstatic
+phone_catalog/  
+│  
+├── phone_catalog/            ← Main project directory  
+│   ├── settings.py           ← Project settings  
+│   ├── urls.py               ← URL routing  
+│   └── ...  
+│  
+├── phones/                   ← "Phones" app  
+│   ├── management/           ← Scripts  
+│   ├── migrations/           ← Database migrations  
+│   ├── models.py             ← Data models  
+│   ├── views.py              ← Views  
+│   ├── templates/            ← HTML templates  
+│   └── static/               ← Static files (CSS, JS)  
+│  
+├── manage.py                 ← Main project management script  
+├── requirements.txt          ← Project dependencies  
+└── README.md                 ← This file  
 ```
 
 ---
 
-## 📝 Запуск скрипта для импорта данных
+## ⚙️ Static Files Setup  
 
-Для импорта данных о телефонах из CSV-файла в модель **Phone** выполните следующий шаги.
+Static files (CSS, JavaScript) are placed in the `static/` directory. For production, static files must be collected using the command:  
 
-### 1. Размещение CSV файла
-
-Подготовьте CSV файл с данными о телефонах, например:
-
-```csv
-id;name;image;price;release_date;lte_exists
-1;Samsung Galaxy Edge 2;https://example.com/image.jpg;73000;2016-12-12;True
-2;Iphone X;https://example.com/image2.jpg;80000;2017-06-01;True
-3;Nokia 8;https://example.com/image3.jpg;20000;2013-01-20;False
-```
-
-### 2. Запуск скрипта
-
-Чтобы импортировать данные, нужно использовать команду Django `manage.py` для запуска кастомного скрипта. Для этого выполните следующую команду в командной строке:
-
-```bash
-python manage.py import_phones путь/к/вашему/файлу.csv
-```
-
-**Пример:**
-
-```bash
-python manage.py import_phones /home/user/data/phones.csv
-```
-
-### 3. Что делает скрипт:
-
-* Скрипт считывает данные из указанного CSV файла.
-* Для каждого телефона (согласно его `id`) выполняется либо **обновление** существующей записи в базе данных, либо **создание** новой записи, если телефон с таким `id` не найден.
-* Скрипт также **создаёт slug** для каждого телефона на основе его названия.
-* Все действия логируются, и результат можно увидеть в консоли или в логах, если логирование настроено.
-
-### 4. Примечания:
-
-* Убедитесь, что в модели **Phone** определены все необходимые поля (`id`, `name`, `price`, `release_date`, `lte_exists`, `slug`).
-* Для корректной работы скрипта не забудьте настроить файл логирования (если необходимо).
+```bash  
+python manage.py collectstatic  
+```  
 
 ---
 
-### 💡 Пример вывода в консоли:
+## 📝 Running the Data Import Script  
 
-```
-Создан: Samsung Galaxy Edge 2
-Обновлён: Iphone X
-Создан: Nokia 8
-```
+To import phone data from a CSV file into the **Phone** model, follow these steps.  
 
+### 1. Preparing the CSV File  
 
+Prepare a CSV file with phone data, for example:  
+
+```csv  
+id;name;image;price;release_date;lte_exists  
+1;Samsung Galaxy Edge 2;https://example.com/image.jpg;73000;2016-12-12;True  
+2;Iphone X;https://example.com/image2.jpg;80000;2017-06-01;True  
+3;Nokia 8;https://example.com/image3.jpg;20000;2013-01-20;False  
+```  
+
+### 2. Running the Script  
+
+To import the data, use the Django `manage.py` command to run the custom script. Execute the following command in the terminal:  
+
+```bash  
+python manage.py import_phones path/to/your/file.csv  
+```  
+
+**Example:**  
+
+```bash  
+python manage.py import_phones /home/user/data/phones.csv  
+```  
+
+### 3. What the Script Does:  
+
+* The script reads data from the specified CSV file.  
+* For each phone (based on its `id`), it either **updates** an existing database record or **creates** a new one if the phone is not found.  
+* The script also **generates a slug** for each phone based on its name.  
+* All actions are logged, and results can be seen in the console or logs if logging is configured.  
+
+### 4. Notes:  
+
+* Ensure that the **Phone** model has all required fields (`id`, `name`, `price`, `release_date`, `lte_exists`, `slug`).  
+* For proper script execution, configure logging if necessary.  
 
 ---
 
-## 📝 Лицензия
+### 💡 Example Console Output:  
 
-Этот проект лицензируется по лицензии MIT.
+```
+Created: Samsung Galaxy Edge 2  
+Updated: Iphone X  
+Created: Nokia 8  
+```  
 
 ---
 
-Если потребуется помощь или есть вопросы, не стесняйтесь создавать issue или писать на почту!
+## 📝 License  
+
+This project is licensed under the MIT License.  
