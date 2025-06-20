@@ -159,6 +159,53 @@ online_library/
 * **Viewing Books**: On the homepage (`/books/`), all books will be displayed.
 * **Filter by Date**: You can view books by specific publication dates using URLs in the format `/books/YYYY-MM-DD/`.
 * **Navigation**: Links to previous and next dates allow you to navigate through the catalog.
+---
+
+
+## 📝 Running the Data Import Script  
+
+To import books data from a JSON file into the **Book** model, follow these steps.  
+
+### 1. Preparing the JSON File  
+
+Prepare a JSON file with phone data, for example:  
+
+```json  
+[
+  {
+    "model": "books.book",
+    "pk": 1,
+    "fields": {
+      "name": "Война и мир",
+      "author": "Л.Н. Толстой",
+      "pub_date": "2018-02-27"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 2,
+    "fields": {
+      "name": "1984",
+      "author": "Джордж Оруэл",
+      "pub_date": "2016-12-06"
+    }
+  }
+]
+```  
+
+### 2. Running the Script  
+
+To import the data, use the Django `manage.py` command to run the custom script. Execute the following command in the terminal:  
+
+```bash  
+python manage.py import_books path/to/your/file.json  
+```  
+
+**Example:**  
+
+```bash  
+python manage.py import_books /home/user/data/books.csv  
+```
 
 ---
 
