@@ -1,7 +1,3 @@
-Here’s the English translation of your `README.md` file:
-
----
-
 # Phone Catalog
 
 The **Phone Catalog** project is a web application for displaying a phone catalog with sorting capabilities and detailed product information.
