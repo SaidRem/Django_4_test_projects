@@ -20,7 +20,7 @@
         </div>
         <div class="pagination">
             {% if previous_date %}
-                <a href="{% url 'book_by_date' previous_date %}">{{ previous_date }}</a>
+                <a href="{% url 'book_by_date' previous_date %}">{{ previous_date }}</a>&nbsp;
             {% endif %}
 
             {% if next_date %}
