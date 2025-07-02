@@ -1,6 +1,6 @@
 Here’s a detailed `README.md` for your **`school_website`** project with the `school` app:
 
-````markdown
+
 # School Website
 
 This is a Django project for a simple school website. The project manages teachers and students, allowing the following functionalities:
@@ -32,19 +32,19 @@ This is a Django project for a simple school website. The project manages teache
 
 ### Steps to run the project:
 
-1. **Clone the repository:**
+**Clone the repository:**
     ```bash
     git clone https://github.com/your-username/school_website.git
     cd school_website
     ```
 
-2. **Create and activate a virtual environment:**
+**Create and activate a virtual environment:**
 
    For Windows:
    ```bash
    python -m venv venv
    venv\Scripts\activate
-````
+```
 
 For Linux/Mac:
 
@@ -53,31 +53,31 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-3. **Install the required dependencies:**
+**Install the required dependencies:**
 
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **Apply migrations:**
+**Apply migrations:**
 
    ```bash
    python manage.py migrate
    ```
 
-5. **Create a superuser (optional):**
+**Create a superuser (optional):**
 
    ```bash
    python manage.py createsuperuser
    ```
 
-6. **Run the development server:**
+**Run the development server:**
 
    ```bash
    python manage.py runserver
    ```
 
-7. **Access the application:**
+**Access the application:**
 
    * Open `http://127.0.0.1:8000/` in your browser to view the school website.
    * Admin panel is available at `http://127.0.0.1:8000/admin/`.
