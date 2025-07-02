@@ -41,6 +41,11 @@ class Scope(models.Model):
         verbose_name = 'Тематика статьи'
         verbose_plural = 'Тематики статьи'
         unique_together = ('article', 'tag')
+        constraints = [
+            models.UniqueConstraint(fields=['article', 'is_main'], 
+            condition=models.Q(is_main=True), 
+            name='unique_main_tag_per_article')
+        ]
 
     def __str__(self):
         return f'{self.article.title} - {self.tag.name}'
