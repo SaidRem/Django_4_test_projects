@@ -1,6 +1,3 @@
-Here’s a detailed `README.md` for your **`school_website`** project with the `school` app:
-
-
 # School Website
 
 This is a Django project for a simple school website. The project manages teachers and students, allowing the following functionalities:
