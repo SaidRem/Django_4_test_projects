@@ -39,7 +39,7 @@ class Scope(models.Model):
 
     class Meta:
         verbose_name = 'Тематика статьи'
-        verbose_plural = 'Тематики статьи'
+        verbose_name_plural = 'Тематики статьи'
         unique_together = ('article', 'tag')
         constraints = [
             models.UniqueConstraint(fields=['article', 'is_main'],
