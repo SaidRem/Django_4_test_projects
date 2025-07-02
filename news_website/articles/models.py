@@ -11,7 +11,7 @@ class Tag(models.Model):
         ordering = ['name']
 
     def __str__(self):
-        return self.title
+        return self.name
 
 
 class Article(models.Model):
@@ -42,9 +42,9 @@ class Scope(models.Model):
         verbose_plural = 'Тематики статьи'
         unique_together = ('article', 'tag')
         constraints = [
-            models.UniqueConstraint(fields=['article', 'is_main'], 
-            condition=models.Q(is_main=True), 
-            name='unique_main_tag_per_article')
+            models.UniqueConstraint(fields=['article', 'is_main'],
+                                    condition=models.Q(is_main=True),
+                                    name='unique_main_tag_per_article')
         ]
 
     def __str__(self):
